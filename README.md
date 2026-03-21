@@ -20,6 +20,7 @@ A fully segmented, enterprise-grade Security Operations Center built on bare-met
  
 ```
 
+![bdc2c16f-9bf5-45ce-beca-9cd657a86b16](https://github.com/user-attachments/assets/e8854e60-3f35-4bd8-ab05-162320e0faed)
 
 
 ```
