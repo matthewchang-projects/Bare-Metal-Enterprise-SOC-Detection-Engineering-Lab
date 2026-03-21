@@ -1,7 +1,7 @@
 # Bare-Metal Enterprise SOC & Detection Engineering Lab
  
-A fully segmented, enterprise-grade Security Operations Center built on bare-metal Proxmox VE. Designed to simulate real-world adversary activity, generate authentic endpoint and network telemetry, and develop custom detection logic mapped to MITRE ATT&CK.
- 
+Security Operations Centers are increasingly limited not by a lack of data, but by an inability to effectively transform high-volume telemetry into reliable detections. This lab investigates detection engineering as a systematic approach to improving signal fidelity by designing and deploying a bare-metal, enterprise-scale SOC lab. The environment replicates real-world infrastructure, including network segmentation, endpoint activity, and adversary simulation, to enable end-to-end validation of detection logic. The primary objective is to bridge the gap between raw log ingestion and actionable security insights through iterative detection development, testing, and tuning. This lab reflects a focus on building reproducible, high-confidence detection pipelines aligned with modern SOC practices. 
+
 ---
  
 ## Hardware
