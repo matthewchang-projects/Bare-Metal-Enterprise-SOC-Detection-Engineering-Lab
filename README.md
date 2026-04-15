@@ -92,13 +92,13 @@ Custom SPL detection rules mapped to MITRE ATT&CK, each documented with:
 
 **Techniques targeted:**
 
-- `T1558.003` — Kerberoasting
-- `T1550.002` — Pass-the-Hash
-- `T1003.001` — LSASS Memory Dump
-- `T1059.001` — PowerShell Execution
-- `T1071` — C2 Beacon Traffic
-- `T1021.001` — Lateral Movement via RDP
-- `T1078` — Valid Accounts / Credential Abuse
+- `T1558.003` - Kerberoasting
+- `T1550.002` - Pass-the-Hash
+- `T1003.001` - LSASS Memory Dump
+- `T1059.001` - PowerShell Execution
+- `T1071` - C2 Beacon Traffic
+- `T1021.001` - Lateral Movement via RDP
+- `T1078` - Valid Accounts / Credential Abuse
 
 See [`/detection-rules`](/detection-rules) for full SPL queries and [`/mitre-coverage`](/mitre-coverage) for the ATT&CK coverage matrix including gap analysis.
 
@@ -108,9 +108,9 @@ See [`/detection-rules`](/detection-rules) for full SPL queries and [`/mitre-cov
 
 The attacker network (`vmbr4`) runs controlled attack scenarios using:
 
-- **Kali Linux** — Enumeration, exploitation, credential attacks
-- **C2 Frameworks** — Beacon simulation, implant communication
-- **Atomic Red Team** — Mapped ATT&CK technique execution
+- **Kali Linux** - Enumeration, exploitation, credential attacks
+- **C2 Frameworks** - Beacon simulation, implant communication
+- **Atomic Red Team** - Mapped ATT&CK technique execution
 
 All attack traffic routes through OPNsense/Suricata, producing correlated network + endpoint evidence in Splunk. See [`/attack-scenarios`](/attack-scenarios) for end-to-end documented attack chains with telemetry, detection logic, and SOAR response.
 
@@ -120,7 +120,7 @@ All attack traffic routes through OPNsense/Suricata, producing correlated networ
 
 Building a production-grade detection engineering environment from bare metal surfaced several non-obvious engineering problems that vendor documentation and tutorials consistently underrepresent.
 
-**False positive volume at initial deployment is much higher than expected.** When Sysmon, WEF, Suricata, and Zeek were brought online simultaneously, the volume of alerts that did not represent real threats was high enough to undermine confidence in the entire pipeline. Detection engineering is not just rule-writing — it is a sustained process of establishing behavioral baselines first, then layering detections on top of that baseline. Deploying detection logic before baselines are stable produces noise, not signal.
+**False positive volume at initial deployment is much higher than expected.** When Sysmon, WEF, Suricata, and Zeek were brought online simultaneously, the volume of alerts that did not represent real threats was high enough to undermine confidence in the entire pipeline. Detection engineering is not just rule-writing, it is a sustained process of establishing behavioral baselines first, then layering detections on top of that baseline. Deploying detection logic before baselines are stable produces noise, not signal.
 
 **Network time synchronization is a hard dependency, not an afterthought.** Timestamp mismatches across VMs caused correlated alerts to appear out of sequence in Splunk, making attack chain reconstruction unreliable. NTP enforcement via GPO across all domain-joined VMs must be validated before any detection work begins. A detection pipeline built on unsynchronized clocks is not a detection pipeline.
 
@@ -130,7 +130,7 @@ Building a production-grade detection engineering environment from bare metal su
 
 **Realistic baseline traffic is essential before running attack simulations.** Running attack scenarios against workstations with no prior activity produces trivially detectable anomalies. The CorpBot framework was built to generate realistic application, authentication, and network events across WS01–WS06 so that detections are validated against a realistic signal-to-noise environment rather than an artificially quiet one.
 
-**Detection tuning is iterative, not one-time.** Initial Suricata ET Open rules generated significant alert volume from legitimate lab management traffic that superficially resembled scanning behavior. The tuning process — suppression rules, threshold adjustments, correlation logic refinement — required more time than anticipated and represents a realistic approximation of what production SOC teams manage continuously.
+**Detection tuning is iterative, not one-time.** Initial Suricata ET Open rules generated significant alert volume from legitimate lab management traffic that superficially resembled scanning behavior. The tuning process, suppression rules, threshold adjustments, correlation logic refinement, required more time than anticipated and represents a realistic approximation of what production SOC teams manage continuously.
 
 ---
 
@@ -154,7 +154,7 @@ Building a production-grade detection engineering environment from bare metal su
 
 ## Intentional Security Decisions
 
-This lab is built for **detection**, not prevention. Firewall rules are intentionally permissive between internal segments to maximize attack surface and generate realistic telemetry. Vulnerable AD configurations — Kerberoastable SPNs, over-privileged service accounts, weak password policies — are deliberate detection targets, not oversights.
+This lab is built for **detection**, not prevention. Firewall rules are intentionally permissive between internal segments to maximize attack surface and generate realistic telemetry. Vulnerable AD configurations Kerberoastable SPNs, over-privileged service accounts, weak password policies are deliberate detection targets, not oversights.
 
 > This is a closed, isolated lab environment. The attacker network has no path to the internet and no path to the SIEM. No production systems are connected.
 
