@@ -27,7 +27,7 @@ On first boot, OPNsense had only two interfaces assigned from the default instal
 ```
 WAN  -> vtnet4  (vmbr4 - attacker network, treated as untrusted)
 LAN  -> vtnet2  (vmbr2 - corporate workstations)
-OPT1 -> vtnet0  (vmbr0 - management / SIEM link)
+OPT1 -> vtnet5  (vmbr5 - management / SIEM link)
 OPT2 -> vtnet1  (vmbr1 - domain controller)
 OPT3 -> vtnet3  (vmbr3 - DMZ / honeypots)
 ```
