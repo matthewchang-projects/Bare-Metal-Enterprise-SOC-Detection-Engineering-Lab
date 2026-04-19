@@ -29,7 +29,7 @@ The lab was built in the following sequence. Each dependency must be completed b
 | WS06 | Windows 11 Pro | vmbr2 | 192.168.20.26 | Domain workstation |
 | WEC-01 | Windows Server 2022 | vmbr2 | 192.168.20.10 | Windows Event Collector |
 | FW01 | OPNsense 26.1.2 | vmbr0-vmbr4 + vmbr6 | See bridge map | Firewall, routing, Suricata, ntopng |
-| ZEEK-01 | Ubuntu | vmbr3 | 192.168.30.10 | Network sensor |
+| ZEEK-01 | Ubuntu | vmbr2 | 192.168.20.15 | Network sensor |
 | HONEY01 | Linux | vmbr3 | 192.168.30.130 | Cowrie SSH honeypot |
 | KALI-01 | Kali Linux | vmbr4 | 192.168.40.10 | Red team / adversary simulation |
 | WIN-ATK | Windows 10 | vmbr4 | 192.168.40.11 | C2 frameworks, exploitation |
