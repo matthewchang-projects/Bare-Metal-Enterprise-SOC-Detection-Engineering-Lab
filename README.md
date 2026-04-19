@@ -140,13 +140,6 @@ Building a production-grade detection engineering environment from bare metal su
 /
 ├── infrastructure/        # Proxmox configs, network setup, VM specs
 ├── active-directory/      # AD build scripts, OU structure, GPOs
-├── detection-rules/       # Custom Splunk SPL queries + Sigma rules
-├── soar-playbooks/        # Shuffle automation workflows
-├── attack-scenarios/      # End-to-end scenario writeups
-│   ├── kerberoasting/
-│   ├── pass-the-hash/
-│   └── c2-beacon/
-├── mitre-coverage/        # ATT&CK coverage matrix with gap analysis
 └── docs/                  # Architecture diagrams, runbooks
 ```
 
