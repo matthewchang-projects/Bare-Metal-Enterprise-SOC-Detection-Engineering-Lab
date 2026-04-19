@@ -58,7 +58,7 @@ Security Operations Centers are increasingly limited not by a lack of data, but 
 | WEC-01 | Windows Server 2022 | vmbr2 | 192.168.20.10 | Windows Event Collector |
 | FW01 | OPNsense | vmbr0–6 | (see above) | Firewall, IDS/IPS, routing, ntopng |
 | ZEEK-01 | Ubuntu | vmbr3 | 192.168.30.10 | Dedicated network sensor |
-| HONEY01 | Linux | vmbr3 | 192.168.30.50 | Cowrie SSH honeypot, honey files, canary tokens |
+| HONEY01 | Linux | vmbr3 | 192.168.30.130 | Cowrie SSH honeypot, honey files, canary tokens |
 | KALI-01 | Kali Linux | vmbr4 | 192.168.40.10 | Red team / adversary simulation |
 | WIN-ATK | Windows 10 | vmbr4 | 192.168.40.11 | C2 frameworks, exploitation |
 
