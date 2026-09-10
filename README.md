@@ -81,7 +81,7 @@ Security Operations Centers are increasingly limited not by a lack of data, but 
 
 ---
 
-## Detection Engineering
+## Detection Engineering - In Progress
 
 Custom SPL detection rules mapped to MITRE ATT&CK, each documented with:
 
@@ -104,7 +104,7 @@ See [`/detection-rules`](/detection-rules) for full SPL queries and [`/mitre-cov
 
 ---
 
-## Adversary Simulation
+## Adversary Simulation - In Progress
 
 The attacker network (`vmbr4`) runs controlled attack scenarios using:
 
